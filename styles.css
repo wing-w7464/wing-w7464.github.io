@@ -104,7 +104,7 @@ a {
 } */
 
 section {
-    padding: 10px 15vw;
+    padding: 10px min(15vw, 10px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 1); /* Creates a subtle drop shadow */
     /* min-height: 50vh; */
 }
@@ -132,10 +132,11 @@ section h1 {
 #pic {
     margin: 0;
     padding: 2px 0;
-    height: 60vh;
+    /* max-height: 60vh; */
     width: 100vw;
     display: flex;
     background-color: #333;
+    flex-wrap: wrap;
 }
 
 
@@ -156,7 +157,7 @@ nav ul {
     list-style: none;
     padding: 0; /* Removes default padding */
     margin: auto; /* Removes default margin */
-    width: 70vw;
+    /* width: 70vw; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -233,12 +234,12 @@ footer {
 }
 
 .review-container::before {
-    left: 0;
+    left: -5px;
     background: linear-gradient(to right, var(--light-green) 0%, rgba(255,255,255,0) 100%);
 }
 
 .review-container::after {
-    right: 0;
+    right: -5px;
     background: linear-gradient(to left, var(--light-green) 0%, rgba(255,255,255,0) 100%);
 }
 
@@ -249,6 +250,7 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
     padding: 20px;
     margin: 10px;
+    max-width: 300px;
     /* max-width: 300px; */
 }
 
@@ -282,8 +284,8 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
     padding: 20px;
     /* max-width: 300px; */
-    width: 42%;
-    min-width: 400px;
+    width: 400px;
+    /* min-width: 400px; */
 }
 
 .service-card h2 {
@@ -298,8 +300,12 @@ footer {
 
 .mySwiper {
     /* width: 100%; */
-    width: 50%;
-    height: 100%;
+    /* width: 50%; */
+    flex: 1;
+    height: 65vh;
+    min-width: 300px;
+    /* height: 100%; */
+    /* max-height: 30vh; */
     background-color: #333;
 }
 
@@ -333,7 +339,9 @@ footer {
 }
   
 #pic .shop_pic {
-    width: 50%;
+    /* width: 50%; */
+    flex: 1;
+    min-width: 300px;
 }
 
 #pic .shop_pic img {
@@ -386,7 +394,7 @@ footer {
 }
 
 .beautiful-frame {
-    font-size: large;
+    /* font-size: large; */
     padding: 10px;
     /* text-align: center; */
     background-color: white;
@@ -406,5 +414,6 @@ footer {
 }
 
 .aligned {
-    width: 40%;
+    max-width: 400px;
+    /* width: 40%; */
 }

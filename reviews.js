@@ -1,7 +1,8 @@
 const reviewSwiper = new Swiper('.review-container', {
     // Configuration
-    slidesPerView: 1,
-    spaceBetween: 0, // Maintain original gap if desired
+    slidesPerView: 'auto',
+    centeredSlides: true, // Center the slides
+    // spaceBetween: 10, // Maintain original gap if desired
     loop: true,
     // centeredSlides: true, // Center the slides
     autoplay: {

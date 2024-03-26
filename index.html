@@ -3,6 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @media (max-width: 767px) {
+            .hidden-mobile {
+                display: none
+            }
+        }
+        @media (min-width: 768px) {
+            .hidden-desktop {
+                display: none
+            }
+        }
+    </style>
     <link rel="stylesheet" href="styles.css">
     <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -17,14 +29,14 @@
             </a>
         </div>
         <div class="spacer"></div>
-        <div class="info-box" id="hours">
+        <div class="info-box hidden-mobile" id="hours">
             <ul>
-                <li>Mon, Tue, Thur, Fri, Sat: <u>9 AM - 7 PM</u></li>
+                <li>Mon, Tue, Thur, Fri, Sat: <br><u>9 AM - 7 PM</u></li>
                 <li>Sunday: <u>11 AM - 5 PM</u></li>
                 <li>Wednesday: <u>Closed</u></li>
             </ul>
         </div>
-        <div class="info-box" id="address">
+        <div class="info-box hidden-mobile" id="address">
             <a href="https://maps.app.goo.gl/S8fDnAAREGspPoSv5" target="_blank" rel="noopener noreferrer">
                 <ul>
                     <li>📍 10420 N La Cañada Dr #110, <br> Oro Valley, AZ 85737</li>
@@ -41,13 +53,13 @@
 
     <nav>
         <ul>
-            <li><a href="index.html">Oro Nails 🏠</a></li>
+            <li><a href="index.html">Oro Nails</a></li>
             <!-- <li><a href="about.html">About Us</a></li> -->
             <li><a href="services.html">Services 💅</a></li>
             <!-- <li><a href="promotions.html">Promotions</a></li> -->
             <li><a href="gallery.html">Gallery 🖼️</a></li>
-            <li><a href="contact.html">Hiring 💪</a></li>
-            <li><a href="contact.html">Booking 📆</a></li>
+            <li class="hidden-mobile"><a href="contact.html">Hiring 💪</a></li>
+            <li class="hidden-mobile"><a href="contact.html">Booking 📆</a></li>
             <li><a href="contact.html">Contact Us 📞</a></li>
         </ul>
     </nav>
@@ -73,16 +85,17 @@
             <!-- <h2 class="centered">Oro Nails: Your Haven for Relaxation and Beautiful Nails</h2> -->
 
             <p>At Oro Nails, we're more than just a nail salon - we're a friendly and welcoming escape designed to make you feel pampered and beautiful. Our reviews consistently mention our warm atmosphere, exceptional service, and top-notch nail care.</p>
+            <div class="hidden-mobile">
+                <h3>What you can expect at Oro Nails:</h3>
             
-            <h3>What you can expect at Oro Nails:</h3>
-            
-            <ul>
-              <li><strong>Kind and Friendly Staff:</strong> Our experienced nail technicians are known for their gentle touch, meticulous work, and ability to make you feel comfortable. They take pride in providing personalized attention to each client.</li>
-              <li><strong>Clean and Relaxing Environment:</strong> Our salon is a haven of tranquility, perfect for unwinding and treating yourself. It's a great place to escape the daily grind and indulge in some self-care.</li>
-              <li><strong>High-Quality Services:</strong>  Whether you're looking for a classic manicure, a luxurious pedicure, or a trendy gel design, our technicians use top-of-the-line products to ensure long-lasting results you'll love. </li>
-              <li><strong>Wide Range of Services:</strong> We offer a variety of services to meet your individual needs, from manicures and pedicures to eyebrow waxing. </li>
-              <li><strong>Fair Prices:</strong> We believe in providing exceptional value for your money. </li>
-            </ul>
+                <ul>
+                  <li><strong>Kind and Friendly Staff:</strong> Our experienced nail technicians are known for their gentle touch, meticulous work, and ability to make you feel comfortable. They take pride in providing personalized attention to each client.</li>
+                  <li><strong>Clean and Relaxing Environment:</strong> Our salon is a haven of tranquility, perfect for unwinding and treating yourself. It's a great place to escape the daily grind and indulge in some self-care.</li>
+                  <li><strong>High-Quality Services:</strong>  Whether you're looking for a classic manicure, a luxurious pedicure, or a trendy gel design, our technicians use top-of-the-line products to ensure long-lasting results you'll love. </li>
+                  <li><strong>Wide Range of Services:</strong> We offer a variety of services to meet your individual needs, from manicures and pedicures to eyebrow waxing. </li>
+                  <li><strong>Fair Prices:</strong> We believe in providing exceptional value for your money. </li>
+                </ul>
+            </div>
             
             <p>Many of our clients have been coming to Oro Nails for years, and we consider them part of our Oro Nails family.  We love building relationships with our customers and making them feel like their best selves when they walk out the door.</p>
             
@@ -231,8 +244,8 @@
         <h1>Find Us!</h1>
         <div class="flex bold">
             <div class="google-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1684.4383404563362!2d-110.99567584186023!3d32.39566727535119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d60c78dc38dbc1%3A0x861a9669550f70c3!2sORO%20NAILS%20LLC!5e0!3m2!1sen!2sus!4v1710633853874!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+                <iframe class="hidden-mobile" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1684.4383404563362!2d-110.99567584186023!3d32.39566727535119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d60c78dc38dbc1%3A0x861a9669550f70c3!2sORO%20NAILS%20LLC!5e0!3m2!1sen!2sus!4v1710633853874!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="hidden-desktop" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.8674397211407!2d-110.9967060235558!3d32.395914973825114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d60c78dc38dbc1%3A0x861a9669550f70c3!2sORO%20NAILS%20LLC!5e0!3m2!1sen!2sus!4v1711471935514!5m2!1sen!2sus" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
             <div class="aligned">
                 <div class="info-box" id="address">
                     <a href="https://maps.app.goo.gl/S8fDnAAREGspPoSv5" target="_blank" rel="noopener noreferrer">
@@ -263,14 +276,14 @@
             </a>
         </div>
         <div class="spacer"></div>
-        <div class="info-box" id="hours">
+        <div class="info-box hidden-mobile" id="hours">
             <ul>
-                <li>Mon, Tue, Thur, Fri, Sat: <u>9 AM - 7 PM</u></li>
+                <li>Mon, Tue, Thur, Fri, Sat: <br><u>9 AM - 7 PM</u></li>
                 <li>Sunday: <u>11 AM - 5 PM</u></li>
                 <li>Wednesday: <u>Closed</u></li>
             </ul>
         </div>
-        <div class="info-box" id="address">
+        <div class="info-box hidden-mobile" id="address">
             <a href="https://maps.app.goo.gl/S8fDnAAREGspPoSv5" target="_blank" rel="noopener noreferrer">
                 <ul>
                     <li>📍 10420 N La Cañada Dr #110, <br> Oro Valley, AZ 85737</li>

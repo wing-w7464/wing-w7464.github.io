@@ -3,6 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @media (max-width: 767px) {
+            .hidden-mobile {
+                display: none
+            }
+        }
+        @media (min-width: 768px) {
+            .hidden-desktop {
+                display: none
+            }
+        }
+    </style>
     <link rel="stylesheet" href="styles.css">
     <!-- <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -17,14 +29,14 @@
             </a>
         </div>
         <div class="spacer"></div>
-        <div class="info-box" id="hours">
+        <div class="info-box hidden-mobile" id="hours">
             <ul>
-                <li>Mon, Tue, Thur, Fri, Sat: <u>9 AM - 7 PM</u></li>
+                <li>Mon, Tue, Thur, Fri, Sat: <br><u>9 AM - 7 PM</u></li>
                 <li>Sunday: <u>11 AM - 5 PM</u></li>
                 <li>Wednesday: <u>Closed</u></li>
             </ul>
         </div>
-        <div class="info-box" id="address">
+        <div class="info-box hidden-mobile" id="address">
             <a href="https://maps.app.goo.gl/S8fDnAAREGspPoSv5" target="_blank" rel="noopener noreferrer">
                 <ul>
                     <li>📍 10420 N La Cañada Dr #110, <br> Oro Valley, AZ 85737</li>
@@ -41,13 +53,13 @@
 
     <nav>
         <ul>
-            <li><a href="index.html">Oro Nails 🏠</a></li>
+            <li><a href="index.html">Oro Nails</a></li>
             <!-- <li><a href="about.html">About Us</a></li> -->
             <li><a href="services.html">Services 💅</a></li>
             <!-- <li><a href="promotions.html">Promotions</a></li> -->
             <li><a href="gallery.html">Gallery 🖼️</a></li>
-            <li><a href="contact.html">Hiring 💪</a></li>
-            <li><a href="contact.html">Booking 📆</a></li>
+            <li class="hidden-mobile"><a href="contact.html">Hiring 💪</a></li>
+            <li class="hidden-mobile"><a href="contact.html">Booking 📆</a></li>
             <li><a href="contact.html">Contact Us 📞</a></li>
         </ul>
     </nav>
@@ -55,14 +67,14 @@
     <h1>Contact Us</h1>
     
     <section style="height:0;padding:0;margin:0;"></section>
-    <section class="centered" style="height:40vh; padding:5vh">
+    <section class="centered" style="padding:5vh">
         <h3>To book an appointment, ask about open positions, or any other inquiries, please call us at</h3>
         <a href="tel:5202199313">
             <h1>📞 (520) 219-9313</h1>
         </a>
         <h3>or e-mail us at</h3>
         <a href="mailto:oronailsllc@gmail.com">
-            <h1>💌 oronailsllc@gmail.com</h1>
+            <h2>💌 oronailsllc@gmail.com</h2>
         </a>
         <h3>We are always delighted to hear from you! 😄</h3>
     </section>
@@ -74,14 +86,14 @@
             </a>
         </div>
         <div class="spacer"></div>
-        <div class="info-box" id="hours">
+        <div class="info-box hidden-mobile" id="hours">
             <ul>
-                <li>Mon, Tue, Thur, Fri, Sat: <u>9 AM - 7 PM</u></li>
+                <li>Mon, Tue, Thur, Fri, Sat: <br><u>9 AM - 7 PM</u></li>
                 <li>Sunday: <u>11 AM - 5 PM</u></li>
                 <li>Wednesday: <u>Closed</u></li>
             </ul>
         </div>
-        <div class="info-box" id="address">
+        <div class="info-box hidden-mobile" id="address">
             <a href="https://maps.app.goo.gl/S8fDnAAREGspPoSv5" target="_blank" rel="noopener noreferrer">
                 <ul>
                     <li>📍 10420 N La Cañada Dr #110, <br> Oro Valley, AZ 85737</li>
