@@ -344,6 +344,7 @@ footer {
     /* width: 50%; */
     flex: 1;
     min-width: 300px;
+    max-height: 50vh;
 }
 
 #pic .shop_pic img {
