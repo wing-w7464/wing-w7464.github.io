@@ -104,7 +104,8 @@ a {
 } */
 
 section {
-    padding: 10px min(15vw, 10px);
+    /* padding: 10px minmax(10px, 15vw); */
+    padding: 10px 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 1); /* Creates a subtle drop shadow */
     /* min-height: 50vh; */
 }
@@ -367,11 +368,11 @@ footer {
 
 .galleryGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Creates a responsive number of columns */
+    grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr)); /* Creates a responsive number of columns */
     grid-gap: 10px; /* Space between images */
     padding: 10px;
-    background-color: white;
-    box-shadow: inset 0 0 20vw #000;
+    background-color: #aaa;
+    box-shadow: inset 0 0 10vw #000;
 }
 
 .galleryGrid img {
