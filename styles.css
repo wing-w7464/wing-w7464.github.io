@@ -1,0 +1,410 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Dekko&display=swap'); */
+
+:root {
+    --main-bg-color: white;
+    --light-green: rgb(192, 255, 192);
+    --light-red: rgb(255, 230, 234);
+}
+
+body {
+    margin: 0;
+    /* font-family: 'Dekko'; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: var(--light-green);
+}
+
+h1 {
+    text-align: center;
+}
+
+body > h1 {
+    background-color: white;
+    padding: 0.67em;
+    margin:0;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Banner */
+.banner {
+    padding-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* height: 120px; */
+    background-color: var(--light-green);
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1); /* Creates a subtle drop shadow */
+}
+
+.logo {
+    margin-left: 20px;
+}
+
+.logo img {
+    max-height: 120px;
+    width: 25vw;
+    height: auto;
+}
+
+.spacer {
+    width: 600px;
+    max-width: 10vw;
+}
+
+.info-box {
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+.info-box ul {
+    margin: 0;
+}
+.info-box ul li{
+    margin: 10px 0;
+}
+
+.info-box#hours {
+    text-align: center;
+}
+
+.info-box#address ul{
+    font-size: larger;
+    /* list-style: 📍; */
+}
+
+.info-box#phone {
+    background-color: pink;
+    border: 4px solid darkgreen;
+    border-radius: 8px;
+}
+
+.info-box h3 {
+    margin: 0;
+}
+
+/* section {
+    margin: auto;
+    width: 70vw;
+    min-width: 600px;
+    padding: 10px;
+    min-height: 50vh;
+} */
+
+section {
+    padding: 10px 15vw;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1); /* Creates a subtle drop shadow */
+    /* min-height: 50vh; */
+}
+
+section:nth-child(even) {
+    background-color: var(--light-green);
+}
+
+section:nth-child(odd) {
+    background-color: var(--light-red);
+}
+
+section h1 {
+    font-size:xx-large
+}
+
+/* #pic {
+    margin: 0;
+    width: 100vw;
+    height: 50vh;
+    background-image: url(img/img1.jpeg);
+    background-size: cover;
+} */
+
+#pic {
+    margin: 0;
+    padding: 2px 0;
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    background-color: #333;
+}
+
+
+nav {
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Creates a subtle drop shadow */
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0; /* Removes default padding */
+    margin: auto; /* Removes default margin */
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+  
+nav ul li {
+    flex: 1; /* Distributes space evenly among items */
+    margin: 0 5px; /* Optional: Adds a little space between the menu items */
+}
+
+nav ul li a {
+    display: block; /* Makes the link fill the entire space of the <li> */
+    padding: 20px 0; /* Adjusts the padding to increase the clickable area */
+    color: #000; /* Text color */
+    text-decoration: none; /* Removes the underline */
+    transition: background-color 0.3s; /* Optional: Adds a transition effect on hover */
+}
+
+nav ul li a:hover {
+    background-color: #f2f2f2; /* Optional: Change background color on hover */
+}
+
+footer {
+    padding: 0;
+    padding-bottom: 10px;
+    background-color: var(--light-green);
+    text-align: center;
+}
+
+/* Services Homepage */
+.service-container-homepage {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.service-homepage {
+    padding: 10px 50px;
+}
+
+.service-homepage img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
+}
+
+.service-homepage img:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Drop shadow */
+}
+
+
+/* Reviews */
+#reviews {
+    padding-bottom: 20px;
+}
+
+.review-container {
+    position: relative;
+    overflow: hidden; /* Ensure the fades don't extend outside the container */
+    /* Keep your existing styles */
+}
+
+.review-container::before, .review-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px; /* Adjust the width of the fade effect */
+    pointer-events: none; /* Prevent the fade from interfering with clicks/swipes */
+    z-index: 3;
+}
+
+.review-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--light-green) 0%, rgba(255,255,255,0) 100%);
+}
+
+.review-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--light-green) 0%, rgba(255,255,255,0) 100%);
+}
+
+
+.review-card {
+    background-color: #ffffff;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
+    padding: 20px;
+    margin: 10px;
+    /* max-width: 300px; */
+}
+
+.reviewer-name {
+    color: #333;
+    margin-top: 0;
+}
+
+.star-rating {
+    color: #ffcc00; /* Gold color for stars */
+    margin: 2px 0;
+}
+
+.review-text {
+    color: #666;
+    font-size: 1rem; /* Adjust based on your preference */
+}
+
+/* Services */
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Space between cards */
+    padding: 20px;
+    justify-content: center;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
+    padding: 20px;
+    /* max-width: 300px; */
+    width: 42%;
+    min-width: 400px;
+}
+
+.service-card h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.service h3 span {
+    float: right;
+}
+
+
+.mySwiper {
+    /* width: 100%; */
+    width: 50%;
+    height: 100%;
+    background-color: #333;
+}
+
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+  
+#pic .shop_pic {
+    width: 50%;
+}
+
+#pic .shop_pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    background-color: #333;
+}
+
+.google-map {
+    height: fit-content;
+    width: fit-content;
+    float: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Drop shadow */
+}
+
+#info {
+    padding-bottom: 20px;
+}
+
+/* Gallery */
+
+.galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Creates a responsive number of columns */
+    grid-gap: 10px; /* Space between images */
+    padding: 10px;
+    background-color: white;
+    box-shadow: inset 0 0 20vw #000;
+}
+
+.galleryGrid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures images cover the grid item, can be adjusted */
+}
+
+.centered {
+    text-align: center;
+}
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.bold {
+    font-weight: bold;
+}
+
+.beautiful-frame {
+    font-size: large;
+    padding: 10px;
+    /* text-align: center; */
+    background-color: white;
+    border: 5px solid darkred;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1); /* Drop shadow */
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.beautiful-frame ul {
+    padding-left: 20px;
+}
+
+.beautiful-frame ul li {
+    list-style-type: disc;
+}
+
+.aligned {
+    width: 40%;
+}
